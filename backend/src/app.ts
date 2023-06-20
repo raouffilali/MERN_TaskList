@@ -4,6 +4,9 @@ import notesRoutes from "./routes/notesRoute";
 import morgan from "morgan";
 import createHttpError, { isHttpError } from "http-errors";
 
+
+
+
 const app = express();
 app.use(morgan("dev"));
 
