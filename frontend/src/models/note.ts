@@ -1,8 +1,9 @@
 export interface Note {
-//   id: number;
+  _id: string | null | undefined;
   title: string;
   text?: string;
-//   createdAt: string;
-//   updatedAt: string;
-//   v: number;
+  createdAt: string;
+  updatedAt: string;
+
+
 }

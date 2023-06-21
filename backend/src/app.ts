@@ -1,13 +1,15 @@
+import cors from "cors";
 import "dotenv/config";
 import express, { NextFunction, Request, Response } from "express";
 import notesRoutes from "./routes/notesRoute";
 import morgan from "morgan";
 import createHttpError, { isHttpError } from "http-errors";
-
-
-
+import bodyParser from "body-parser";
 
 const app = express();
+app.use(cors());
+app.use(bodyParser.json());
+
 app.use(morgan("dev"));
 
 app.use(express.json());
