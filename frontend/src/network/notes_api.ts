@@ -27,6 +27,7 @@ export interface NoteInput {
   title: string;
   text?: string;
 }
+// function to create notes
 
 export async function createNote (note: NoteInput): Promise<Note>{
   const response= await fetchData("http://localhost:5000/api/notes", {
