@@ -5,10 +5,15 @@
 }
 
 .cardBody {
-  overflow: hidden;
+  overflow: scroll;
   mask-image: linear-gradient(180deg, #000 60%, transparent);
   -webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);
 }
+/* hide scroll bar but keep functionality */
+.cardBody::-webkit-scrollbar {
+  display: none;
+}
+
 
 .cardText {
   white-space: pre-line;
