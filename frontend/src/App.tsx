@@ -7,6 +7,9 @@ import styleUtils from "./styles/utils.module.css";
 import * as NotesApi from "./network/notes_api";
 import AddEditNoteDialog from "./components/AddEditNoteDialog";
 import { FaPlus } from "react-icons/fa";
+import SignUpModal from "./components/SignUpModel";
+import LoginModal from "./components/LoginModal";
+import NavBar from "./components/NavBar";
 
 function App() {
   const [notes, setNotes] = useState<NoteModel[]>([]);
@@ -64,6 +67,18 @@ function App() {
 
   return (
     <>
+      <NavBar
+        logedInUser={null}
+        onSignUpclicked={() => {
+          console.log("hi");
+        }}
+        onLoginUpclicked={() => {
+          console.log("hi");
+        }}
+        onLogOutSuccessful={() => {
+          console.log("hi");
+        }}
+      />
       <Container className={styles.notesPage}>
         <Button
           className={`mt-4 mb-4  ${styleUtils.blockcenter} ${styleUtils.flexCenter}`}
@@ -112,6 +127,27 @@ function App() {
                 )
               );
               setNoteToEdit(null);
+            }}
+          />
+        )}
+        {false && (
+          <SignUpModal
+            onDismiss={() => {
+              console.log("hi");
+            }}
+            onSignUpSuccessful={() => {
+              console.log("hi");
+            }}
+          />
+        )}
+
+        {false && (
+          <LoginModal
+            onDismiss={() => {
+              console.log("hi");
+            }}
+            onLoginSuccessful={() => {
+              console.log("hi login successfully ");
             }}
           />
         )}

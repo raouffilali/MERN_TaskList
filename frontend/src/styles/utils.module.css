@@ -10,3 +10,12 @@
   align-items: center;
   gap: 4px;
 }
+
+.width100 {
+  width: 100%;
+}
+
+.ButtonColor{
+  background-color: cornflowerblue;
+  color: aliceblue;
+}
